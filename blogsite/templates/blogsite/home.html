@@ -3,5 +3,12 @@
 {% block title %}Welcome{% endblock title %}
 
 {% block content %}
-<h1>Welcome to this blog</h1>
+<h1>Welcome to this site</h1>
+<h2>Read the best blogs in the game</h2>
+<p>Here are some of our recent blogs</p>
+<ul>
+    {% for blog in  blogs%}
+        <li><a href="">{{blog.title|title}}</a></li>
+    {% endfor %}
+</ul>
 {% endblock content %}

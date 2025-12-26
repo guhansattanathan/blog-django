@@ -7,7 +7,9 @@
 <h1>All Posts:</h1>
 <ul>
 {% for blog in blogs %}
-<li><a href = "">{{blog.title|title}}</a></li>
+<li><a href = "{% url "each-post" blog.slug%}">{{blog.title|title}}</a></li>
 {% endfor %}
 </ul>
+
+<h2>Return <a href="{% url "home-page" %}">home. </a>
 {% endblock content %}
